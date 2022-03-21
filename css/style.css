@@ -20,8 +20,8 @@ a {text-decoration: none;}
 header h1.logo img{width: 50px; height: 50px; margin-top: 5px;}
 
 /* toggle */
-header a#menubtn {display: block; color: #007042; font-size: 30px; background: #fff; margin: 0 0 5px 0; cursor:pointer; position: absolute; top: 13px; right: 15px;}
-header a#menubtn:hover {color: #000;}
+header a.menubtn {display: block; color: #007042; font-size: 30px; background: #fff; margin: 0 0 5px 0; cursor:pointer; position: absolute; top: 13px; right: 15px;}
+header a.menubtn:hover {color: #000;}
 
 /* toggle 클릭시 노출 되는 menu */
 header nav#menu {display: none; font-weight: bold; margin-top: 20px; margin-bottom: 15px; text-align: center;}
@@ -87,7 +87,7 @@ footer .copyright p strong a:hover {color: #007042;}
     header .header_box h1.menus {float: right; width: auto;}
 
     /* toggle - pc에서 가리기 */
-    header a#menubtn {display: none;}
+    header a.menubtn {display: none;}
 
     header nav#menu {display: block; margin-top: 4px;}
     header nav#menu ul {float: right; margin-right: -9px;}

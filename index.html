@@ -10,11 +10,27 @@
     <script src="./script/jquery-1.12.3.js"></script>
     <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
     <script>
-        $(function(){
+        /* $(function(){
             $("#menubtn").click(function(){
                 $("#menu").slideToggle();
             });
         });
+        */
+       $(function(){
+           var $btnGnb = $('.menubtn');
+           var $nav = $('#menu');
+           $btnGnb.on('click', function(){
+               $nav.slideToggle();
+           }); //모바일 메뉴 클릭 이벤트
+           $(window).on('load resize', function(){
+               if ($(this).width() > 768) { //pc모드
+                   $nav.show();
+               } else { // mobile모드
+                   $btnGnb.removeClass('.menubtn').next().hide();
+               }
+           });
+       });
+    //    .slideToggle(); - 선택한 요소가 보여지면 숨겨주고, 숨겨져 있으면 보여줌. (점차 접히고 펼쳐지는 구조)
     </script>
 </head>
 <body>
@@ -24,7 +40,7 @@
                 <div class="header_inner">
                     <h1 class="logo"><a href="./index.html"><img src="./images/logo.png" alt="로고"></a></h1>
                     <div class="menus">
-                        <a href="#" id="menubtn"><i class="fas fa-bars"></i></a>
+                        <a href="#" class="menubtn"><i class="fas fa-bars"></i></a>
                         <nav id="menu">
                             <ul>
                                 <li><a href="#">ABOUT</a></li>
